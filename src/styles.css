@@ -9,6 +9,10 @@
 
 .sidebar-nav-list-item {padding: 5px 5px; display: block; 
 background : #5bc0de; margin-bottom:2px; border-bottom: 1px solid #46b8da;  color:white;}
-.sidebar-nav-list-item a.active{color:green; font-weight: bold;}
+.sidebar-nav-list-item{cursor: pointer;}
+.sidebar-nav-list-item.active{color:green; font-weight: bold; }
 
 .footer{ width:100%; border:1px solid #46b8da; }
+
+
+

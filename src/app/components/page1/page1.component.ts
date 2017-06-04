@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page1.component.css']
 })
 export class Page1Component implements OnInit {
-
+ items;
   constructor() { }
 
   ngOnInit() {
+    this.items = [{name:"jo", age: 27}, {name:"nair", age: 28}, {name:"avm", age: 28}];
   }
 
 }

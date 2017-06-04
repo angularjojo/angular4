@@ -1,8 +1,9 @@
 <div class="sidebar">
 <ul class="sidebar-nav-list">
-  <li *ngFor="let item of sideNavItems" class="sidebar-nav-list-item">
+  <li *ngFor="let item of sideNavItems" class="sidebar-nav-list-item" 
+  routerLink="{{item.route}}" routerLinkActive="active">
     
-    <a routerLink="{{item.route}}" routerLinkActive="active">
+    <a >
      {{item.routeName}}
     </a>
    

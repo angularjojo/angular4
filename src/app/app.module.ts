@@ -12,6 +12,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { Page1Component } from './components/page1/page1.component';
 import { Page2Component } from './components/page2/page2.component';
 
+import {MessageService} from './services/message.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { OrderByPipe } from './pipes/order-by.pipe';
+import { FormatPipe } from './pipes/format.pipe'
+
 
 const appRoutes: Routes = [
   { path: 'page1', component: Page1Component },
@@ -25,7 +30,10 @@ const appRoutes: Routes = [
     SidebarComponent,
     FooterComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
+    FilterPipe,
+    OrderByPipe,
+    FormatPipe
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,7 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

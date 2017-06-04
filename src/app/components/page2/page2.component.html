@@ -1,3 +1,24 @@
 <p>
-  page2 works!
+  Smart Table
 </p>
+
+<input type="text" [(ngModel)]="search">
+
+
+<table class="table table-hover table-striped table-sortable">
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns" (click)="changeSorting(column.variable)">
+        {{column.display}}
+        <i [class]="selectedClass(column.variable)"></i>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let object of data | orderBy : convertSorting() | filter:search ">
+      <td *ngFor="let column of columns">
+        {{object[column.variable] | format : column.filter}}
+      </td>
+    </tr>
+  </tbody>
+</table>
